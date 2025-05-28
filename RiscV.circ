@@ -267,6 +267,10 @@
       <a name="labelfont" val="SansSerif bold 8"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(400,1230)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="width" val="7"/>
+    </comp>
     <comp lib="0" loc="(410,700)" name="Clock"/>
     <comp lib="0" loc="(430,830)" name="Splitter">
       <a name="bit1" val="0"/>
@@ -321,6 +325,7 @@
       <a name="labelfont" val="SansSerif bold 12"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="0" loc="(840,1310)" name="Clock"/>
     <comp lib="0" loc="(860,730)" name="Probe">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -405,6 +410,7 @@
       <a name="facing" val="south"/>
       <a name="size" val="30"/>
     </comp>
+    <comp lib="1" loc="(890,1310)" name="NOT Gate"/>
     <comp lib="2" loc="(1000,780)" name="Multiplexer">
       <a name="selloc" val="tr"/>
       <a name="width" val="32"/>
@@ -436,18 +442,34 @@ a337
 </a>
       <a name="dataWidth" val="32"/>
     </comp>
+    <comp lib="4" loc="(470,1220)" name="ROM">
+      <a name="addrWidth" val="7"/>
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="contents">addr/data: 7 8
+20 c 6 30 52 14 70 a
+20 c 26 30 52 c 60 a
+20 c 46 30 51 54 60 a
+20 c 66 30 51 60 64 a
+20 d 46 30 51 40 6a a
+20 d 46 70 51 60 60 a
+20 d 48 60 51 60 60
+</a>
+    </comp>
     <comp lib="4" loc="(490,640)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="32"/>
     </comp>
+    <comp lib="4" loc="(950,1250)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <comp lib="5" loc="(520,780)" name="Button">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="8" loc="(1292,241)" name="Text">
-      <a name="text" val="1110102"/>
-    </comp>
-    <comp lib="8" loc="(1294,218)" name="Text">
+    <comp lib="8" loc="(1290,215)" name="Text">
       <a name="text" val="0011002"/>
+    </comp>
+    <comp lib="8" loc="(1290,240)" name="Text">
+      <a name="text" val="1110102"/>
     </comp>
     <comp lib="8" loc="(1295,195)" name="Text">
       <a name="text" val="0110002"/>
@@ -528,6 +550,7 @@ a337
     <wire from="(2130,750)" to="(2160,750)"/>
     <wire from="(2150,770)" to="(2160,770)"/>
     <wire from="(2160,750)" to="(2160,770)"/>
+    <wire from="(400,1230)" to="(470,1230)"/>
     <wire from="(410,700)" to="(430,700)"/>
     <wire from="(420,740)" to="(420,830)"/>
     <wire from="(420,740)" to="(570,740)"/>
@@ -560,13 +583,16 @@ a337
     <wire from="(680,590)" to="(700,590)"/>
     <wire from="(680,620)" to="(700,620)"/>
     <wire from="(700,870)" to="(900,870)"/>
+    <wire from="(710,1280)" to="(950,1280)"/>
     <wire from="(710,680)" to="(780,680)"/>
     <wire from="(740,580)" to="(760,580)"/>
     <wire from="(760,550)" to="(760,580)"/>
     <wire from="(780,530)" to="(780,680)"/>
+    <wire from="(840,1310)" to="(860,1310)"/>
     <wire from="(850,730)" to="(850,790)"/>
     <wire from="(850,730)" to="(860,730)"/>
     <wire from="(850,790)" to="(910,790)"/>
+    <wire from="(890,1310)" to="(910,1310)"/>
     <wire from="(890,810)" to="(900,810)"/>
     <wire from="(890,830)" to="(900,830)"/>
     <wire from="(890,850)" to="(900,850)"/>
@@ -578,6 +604,10 @@ a337
     <wire from="(900,850)" to="(900,860)"/>
     <wire from="(900,860)" to="(920,860)"/>
     <wire from="(900,870)" to="(900,1080)"/>
+    <wire from="(910,1300)" to="(910,1310)"/>
+    <wire from="(910,1300)" to="(950,1300)"/>
+    <wire from="(910,1310)" to="(910,1320)"/>
+    <wire from="(910,1320)" to="(950,1320)"/>
     <wire from="(910,770)" to="(910,790)"/>
     <wire from="(910,790)" to="(970,790)"/>
     <wire from="(920,820)" to="(1010,820)"/>
