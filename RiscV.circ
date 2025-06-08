@@ -43,9 +43,7 @@
     <tool lib="8" name="Text Tool">
       <a name="font" val="SansSerif bold 11"/>
     </tool>
-    <tool lib="0" name="Pin">
-      <a name="appearance" val="classic"/>
-    </tool>
+    <tool lib="0" name="Pin"/>
     <sep/>
     <tool lib="0" name="Pin"/>
     <tool lib="0" name="Pin">
@@ -4092,5 +4090,332 @@ a337
     <wire from="(730,80)" to="(760,80)"/>
     <wire from="(780,160)" to="(780,280)"/>
     <wire from="(800,120)" to="(860,120)"/>
+  </circuit>
+  <circuit name="REG_EX_MEM">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="REG_EX_MEM"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(180,1070)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="MemToReg_in"/>
+    </comp>
+    <comp lib="0" loc="(180,1270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="MemRead_in"/>
+    </comp>
+    <comp lib="0" loc="(180,1460)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="MemWrite_in"/>
+    </comp>
+    <comp lib="0" loc="(180,870)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="RegWrite_in"/>
+    </comp>
+    <comp lib="0" loc="(190,640)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rd_in"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(220,250)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ALUResult_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(220,450)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="WriteData_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(310,290)" name="Clock"/>
+    <comp lib="0" loc="(310,490)" name="Clock"/>
+    <comp lib="0" loc="(310,680)" name="Clock"/>
+    <comp lib="0" loc="(320,1110)" name="Clock"/>
+    <comp lib="0" loc="(320,1310)" name="Clock"/>
+    <comp lib="0" loc="(320,1500)" name="Clock"/>
+    <comp lib="0" loc="(320,910)" name="Clock"/>
+    <comp lib="0" loc="(600,250)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ALUResult_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(600,450)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="WriteData_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(610,640)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="rd_out"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(620,1070)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="MemToReg_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(620,1270)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="MemRead_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(620,1460)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="MemWrite_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(620,870)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="RegWrite_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="4" loc="(340,220)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(350,420)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(360,610)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="4" loc="(380,1040)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="4" loc="(380,1240)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="4" loc="(380,1430)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="4" loc="(380,840)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="8" loc="(369,192)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Resultado da ALU no estagio EX"/>
+    </comp>
+    <comp lib="8" loc="(369,602)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Usado no estagio WB para saber onde escrever o valor"/>
+    </comp>
+    <comp lib="8" loc="(380,396)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Dado vindo de rs2, que sera escrito na memoria se for uma instrucao"/>
+    </comp>
+    <comp lib="8" loc="(385,824)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Diz se a instrucao atual deve escrever em um registrador"/>
+    </comp>
+    <comp lib="8" loc="(394,998)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Se 1, dado sera escrito ira vir da RAM"/>
+    </comp>
+    <comp lib="8" loc="(397,1018)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Se 0, vira da ALU"/>
+    </comp>
+    <comp lib="8" loc="(398,1412)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Ativa escrita na memoria"/>
+    </comp>
+    <comp lib="8" loc="(401,1221)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Ativa leitura da memoria"/>
+    </comp>
+    <wire from="(180,1070)" to="(380,1070)"/>
+    <wire from="(180,1270)" to="(380,1270)"/>
+    <wire from="(180,1460)" to="(380,1460)"/>
+    <wire from="(180,870)" to="(380,870)"/>
+    <wire from="(190,640)" to="(360,640)"/>
+    <wire from="(220,250)" to="(340,250)"/>
+    <wire from="(220,450)" to="(350,450)"/>
+    <wire from="(310,290)" to="(330,290)"/>
+    <wire from="(310,490)" to="(330,490)"/>
+    <wire from="(310,680)" to="(340,680)"/>
+    <wire from="(320,1110)" to="(360,1110)"/>
+    <wire from="(320,1310)" to="(360,1310)"/>
+    <wire from="(320,1500)" to="(360,1500)"/>
+    <wire from="(320,910)" to="(360,910)"/>
+    <wire from="(330,270)" to="(330,290)"/>
+    <wire from="(330,270)" to="(340,270)"/>
+    <wire from="(330,290)" to="(340,290)"/>
+    <wire from="(330,470)" to="(330,490)"/>
+    <wire from="(330,470)" to="(350,470)"/>
+    <wire from="(330,490)" to="(350,490)"/>
+    <wire from="(340,660)" to="(340,680)"/>
+    <wire from="(340,660)" to="(360,660)"/>
+    <wire from="(340,680)" to="(360,680)"/>
+    <wire from="(360,1090)" to="(360,1110)"/>
+    <wire from="(360,1090)" to="(380,1090)"/>
+    <wire from="(360,1110)" to="(380,1110)"/>
+    <wire from="(360,1290)" to="(360,1310)"/>
+    <wire from="(360,1290)" to="(380,1290)"/>
+    <wire from="(360,1310)" to="(380,1310)"/>
+    <wire from="(360,1480)" to="(360,1500)"/>
+    <wire from="(360,1480)" to="(380,1480)"/>
+    <wire from="(360,1500)" to="(380,1500)"/>
+    <wire from="(360,890)" to="(360,910)"/>
+    <wire from="(360,890)" to="(380,890)"/>
+    <wire from="(360,910)" to="(380,910)"/>
+    <wire from="(400,250)" to="(600,250)"/>
+    <wire from="(410,450)" to="(600,450)"/>
+    <wire from="(420,640)" to="(610,640)"/>
+    <wire from="(440,1070)" to="(620,1070)"/>
+    <wire from="(440,1270)" to="(620,1270)"/>
+    <wire from="(440,1460)" to="(620,1460)"/>
+    <wire from="(440,870)" to="(620,870)"/>
+  </circuit>
+  <circuit name="REG_MEM_WB">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="REG_MEM_WB"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(240,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ReadData_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(240,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="ALUResult_in"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(240,530)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="rd_in"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(240,760)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="RegWrite_in"/>
+    </comp>
+    <comp lib="0" loc="(240,940)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="MemToReg_in"/>
+    </comp>
+    <comp lib="0" loc="(370,140)" name="Clock"/>
+    <comp lib="0" loc="(370,350)" name="Clock"/>
+    <comp lib="0" loc="(370,570)" name="Clock"/>
+    <comp lib="0" loc="(370,800)" name="Clock"/>
+    <comp lib="0" loc="(370,980)" name="Clock"/>
+    <comp lib="0" loc="(650,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ReadData_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(650,310)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="ALUResult_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(650,530)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="rd_out"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(650,760)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="RegWrite_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(650,940)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="MemToReg_out"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="4" loc="(430,280)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(430,500)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="4" loc="(430,70)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(440,730)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="4" loc="(440,910)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="1"/>
+    </comp>
+    <comp lib="8" loc="(427,34)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Usado quando intrucao e um load"/>
+    </comp>
+    <comp lib="8" loc="(442,262)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Usado quando a intrucao e do tipo aritmetica"/>
+    </comp>
+    <comp lib="8" loc="(447,484)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Serve para indicar onde escrever no banco de registradores"/>
+    </comp>
+    <comp lib="8" loc="(450,713)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Ativa escrita no banco de registradores"/>
+    </comp>
+    <comp lib="8" loc="(465,899)" name="Text">
+      <a name="font" val="SansSerif bold 11"/>
+      <a name="text" val="Seleciona o dado a ser escrito no banco de registradores"/>
+    </comp>
+    <wire from="(240,100)" to="(430,100)"/>
+    <wire from="(240,310)" to="(430,310)"/>
+    <wire from="(240,530)" to="(430,530)"/>
+    <wire from="(240,760)" to="(440,760)"/>
+    <wire from="(240,940)" to="(440,940)"/>
+    <wire from="(370,140)" to="(400,140)"/>
+    <wire from="(370,350)" to="(400,350)"/>
+    <wire from="(370,570)" to="(400,570)"/>
+    <wire from="(370,800)" to="(400,800)"/>
+    <wire from="(370,980)" to="(400,980)"/>
+    <wire from="(400,120)" to="(400,140)"/>
+    <wire from="(400,120)" to="(430,120)"/>
+    <wire from="(400,140)" to="(430,140)"/>
+    <wire from="(400,330)" to="(400,350)"/>
+    <wire from="(400,330)" to="(430,330)"/>
+    <wire from="(400,350)" to="(430,350)"/>
+    <wire from="(400,550)" to="(400,570)"/>
+    <wire from="(400,550)" to="(430,550)"/>
+    <wire from="(400,570)" to="(430,570)"/>
+    <wire from="(400,780)" to="(400,800)"/>
+    <wire from="(400,780)" to="(440,780)"/>
+    <wire from="(400,800)" to="(440,800)"/>
+    <wire from="(400,960)" to="(400,980)"/>
+    <wire from="(400,960)" to="(440,960)"/>
+    <wire from="(400,980)" to="(440,980)"/>
+    <wire from="(490,100)" to="(650,100)"/>
+    <wire from="(490,310)" to="(650,310)"/>
+    <wire from="(490,530)" to="(650,530)"/>
+    <wire from="(500,760)" to="(650,760)"/>
+    <wire from="(500,940)" to="(650,940)"/>
   </circuit>
 </project>
